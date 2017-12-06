@@ -1,27 +1,30 @@
 # nuSelectable
-Lightweight alternative to jQuery Selectable. Inspired by Google Drive file select.
+Lightweight alternative to jQueryUI Selectable. Inspired by Google Drive file select. 
+Initially created by [Alex Suyun](https://github.com/avxto/nuSelectable) as a jQuery plugin, 
+rewrited and developed by Jacek Spławski.
 
 # Code example
-``` javascript
-$(function() {
-    $('#item-container').nuSelectable({
-        items: '.item',
+``` typescript
+    new NuSelectable('.container', {
+        items: '.box',
         selectionClass: 'nu-selection-box',
         selectedClass: 'nu-selected',
-        autoRefresh: true
+        autoRefresh: true,
     });
-});
-
 ```
 
-# Screenshots
+# Differences from Alex Suyun version
+* Convert a JavaScript to TypeScript (easy to use with Angular)
+* No jQuery, jQueryUI or other dependencies
+* Support touch devices
 
-![Screenshot](https://cloud.githubusercontent.com/assets/13611918/10266308/27381d2e-6a27-11e5-9216-92344b558cb3.png)
+# Troubleshooting
+* [Property 'entries' does not exist on type 'ObjectConstructor'](https://stackoverflow.com/questions/45422573/property-entries-does-not-exist-on-type-objectconstructor)
 
 # License
 The MIT License (MIT)
 
-Copyright (c) 2015 Alex Suyun
+Copyright (c) 2017 Jacek Spławski
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
